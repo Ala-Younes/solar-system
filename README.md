@@ -47,3 +47,7 @@ If the installation was successful, you should be able to run the following comm
 ## Access Application on Browser
     http://localhost:3000/
 
+
+### Conditional workflow
+- By Default the **if success()** Status is applied on all steps
+- That's why this ```if: steps.nodejs-unit-testing-step.outcome``` does not work because it's red like ```if: success() && steps.nodejs-unit-testing-step.outcome```
